@@ -9,8 +9,14 @@ import lombok.Getter;
  */
 @AllArgsConstructor
 public enum Plan {
-    _1ギガ(new MonthlyFee(1000));
+    _1ギガ(new MonthlyFee(1000)),
+    _3ギガ(new MonthlyFee(2000)),
+    _30ギガ(new MonthlyFee(6000));
 
     @Getter
     private final MonthlyFee monthlyFee;
+
+    public boolean is1G() {
+        return this.equals(_1ギガ);
+    }
 }
