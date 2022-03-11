@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 @Service
 @AllArgsConstructor
 public class FeeService {
-    public MonthlyFee getMothlyFee(Plan plan, EntameFreeOption option) {
+    public MonthlyFee getMonthlyFee(Plan plan, EntameFreeOption option) {
         if (plan.is1G() && option.isValue()) {
             throw new RuntimeException();
         }

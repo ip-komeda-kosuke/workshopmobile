@@ -35,7 +35,7 @@ public class MonthlyFeeApi {
         }
         EntameFreeOption option = new EntameFreeOption(request.isEntame_free());
         Map<String, Object> res = new HashMap<>();
-        res.put("monthly_fee", new FeeService().getMothlyFee(plan, option).getValue());
+        res.put("monthly_fee", new FeeService().getMonthlyFee(plan, option).getValue());
         return res;
     }
 
